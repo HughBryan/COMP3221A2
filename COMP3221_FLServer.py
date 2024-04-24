@@ -39,6 +39,20 @@ def establish_connections(send_sockets,rec_sockets,port_server,host):
     print("All clients connected to server")
 
 
+    print("Connect to clients") # Create a connection to clients. 
+    rec_sockets = []
+    # Create connection to host. 
+    for i in range(1,len(send_sockets)):
+        host_port = (6000+i)
+        connected = False
+        while not connected:
+            s_send = socket.socket(socket.AF_INET,socket.SOCK_STREAM,)
+            s_send.connect((host,host_port))
+            rec_sockets.append(s_send)
+            # The target port will correspond with the socket that attaches to it. 
+            connected = True
+
+    print("Connected to clients")
 
 
 if __name__ == "__main__":

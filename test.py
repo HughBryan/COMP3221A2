@@ -49,7 +49,8 @@ def run():
     iterations = 1000
 
     # Initialize Theta Values to 0
-    theta = np.array([-4.075362103,-0.014915684,0.813944944,-3.962575642,-3.22829E-05,0.079478525,-0.131325291,-0.093643852,0.768135102])
+    theta = np.array([ 3.8556716  -0.15990652  2.0890116  -1.87269366 -0.02972166  0.06360259
+ -0.19595387 -0.0909144   0.88156046],)
     initial_cost, _ = cost_function(X, y, theta)
 
     print('With initial theta values of {0}, cost error is {1}'.format(theta, initial_cost))
